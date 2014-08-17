@@ -1,12 +1,22 @@
 
 <% if current_user %>
 <% if current_user.rol == "secre" || current_user.rol == "gerente" %>
-<% title "Reporte de Egresos" %>
+<% title "Reporte de Ingresos" %>
 
-<h1><center>Reporte de egresos</center></h1>
+<h1><center>Reporte de Ingresos</center></h1>
+<p size=30>
+<center>
+  <strong> Fecha de Reporte:&nbsp;&nbsp;&nbsp;    
+  <% fecha = Time.now %>
+  <%=fecha.day%>/
+  <%=fecha.month%>/
+  <%=fecha.year%>  
+  </strong>
+</center>
 
+</p>
 <table class="table table-striped">
-
+<% todo = 0%>
   <thead>
   <tr>
     <th>Nombre</th>
@@ -26,6 +36,12 @@
     <td><%= productsale.price %></td>
     <td><%= productsale.sale_id %></td>
     <td><%= productsale.created_at.strftime("%d/%m/%Y") %></td>
+    <% todo = todo + productsale.price %>
+  </tr>
+  <tr>
+    <th>TOTAL</th>
+    <th></th>    
+    <th><%= number_with_precision(todo, :precision =>2, :delimiter => ',') %></th>  
   </tr>
   </tbody>
 <% end %>

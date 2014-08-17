@@ -7,23 +7,6 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*carrusel*/
-
-/*-------------------------*/
-
-
 /*paginas estaticas*/
 
 .redondo {
@@ -285,10 +268,10 @@ div.field-valid img {
 }
 
 .opcion_footer{
-  margin-left: 0px;
-  
-  
-  text-align: center;
+  margin-left: 350px;
+  float: left;
+  width: 2000px;
+  text-align: left;
 }
 
 .opcion_footer p a{
@@ -572,7 +555,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Calibri";
+  font-family: "Caviar";
   font-size: 16px;
   line-height: 1.42857143;
   color: #333;
@@ -742,7 +725,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 34px;
+  font-size: 36px;
 }
 h2,
 .h2 {
@@ -3402,7 +3385,7 @@ input[type="button"].btn-block {
 .dropdown-menu > .active > a:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #428bca;
+  background-color: #E68E3C;
   outline: 0;
 }
 .dropdown-menu > .disabled > a,
@@ -4116,7 +4099,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 13px 8px;
+  padding: 15px 8px;
   font-size: 30px;
   line-height: 22px;
 }
@@ -4764,7 +4747,7 @@ a.list-group-item.active > .badge,
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 85px;  
+    padding-top: 85px;
     padding-bottom: 30px;
   }
   .container .jumbotron {
@@ -4773,7 +4756,7 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 45px;
+    font-size: 63px;
   }
 }
 .thumbnail {
@@ -5164,7 +5147,6 @@ a.list-group-item-danger.active:focus {
   padding: 10px 15px;
   background-color: #46535A;
   border-top: 1px solid #ddd;
-  
 }
 
 .panel-footer a{
@@ -5550,9 +5532,6 @@ button.close {
   margin-top: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
-  position: absolute;
-  bottom: 0;
-
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;
