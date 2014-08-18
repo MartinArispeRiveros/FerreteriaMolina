@@ -38,14 +38,15 @@
     <td><%= productsale.created_at.strftime("%d/%m/%Y") %></td>
     <% todo = todo + productsale.price %>
   </tr>
-  <tr>
+  
+  </tbody>
+<% end %>
+<%end%>
+<tr>
     <th>TOTAL</th>
     <th></th>    
     <th><%= number_with_precision(todo, :precision =>2, :delimiter => ',') %></th>  
   </tr>
-  </tbody>
-<% end %>
-<%end%>
 </table>
 
 <form><input type="button" name="imprimir" value="Imprimir" onclick="window.print();"></form>

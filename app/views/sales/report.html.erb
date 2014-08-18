@@ -27,7 +27,7 @@
                                 <tr>
                                     <td><CENTER><%= sale.client_name %></CENTER></td>
                                     <td><CENTER><%= sale.check_number%></CENTER></td>
-                                    <td><CENTER><%= sale.price %>Bs.</CENTER></td>
+                                    <td><CENTER><%= sale.price %> Bs.</CENTER></td>
                                     <td>
                                         <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#<%=sale.id%>">Detalles</a>
                                         <div class="modal fade" id="<%=sale.id%>" tabindex="-1" role="dialog" aria-labelledby="<%=sale.id%>" aria-hidden="true">
@@ -73,7 +73,7 @@
                     <tr>
             <td><h4><CENTER><b>TOTAL</b></CENTER></h4></td>
             <td></td>
-            <td><h4><CENTER><b><%= @total%>Bs.</b></CENTER></h4></td>
+            <td><h4><CENTER><b><%= @total%> Bs.</b></CENTER></h4></td>
             <td></td>
         </tr>
     </tbody>
