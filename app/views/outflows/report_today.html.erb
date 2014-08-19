@@ -40,7 +40,9 @@
     <td><%= number_with_precision(compras, :precision =>2, :delimiter => ',') %> Bs.</td>  
   </tr>
   <%totales = compras - ventas %>
-  <%totales = totales*(-1)%>
+  <%if(totales<0)%>
+  	<%totales = totales*(-1)%>
+  <%end%>
   <tr>  	
   	<th>TOTAL</th>
     <th></th>    
