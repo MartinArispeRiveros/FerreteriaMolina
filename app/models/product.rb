@@ -29,7 +29,7 @@ class Product < ActiveRecord::Base
 	validates :name, presence: {:message => "Es un campo obligatorio"}
 	validates :general_code, uniqueness: {case_sensitive: false, :message => "El codigo ya existe"}	
 
-	validates :name, length: {minimum: 2, maximum: 20, :message => "El Nombre debe tener entre 2 y 20 caracteres"}
+	validates :name, length: {minimum: 2, maximum: 30, :message => "El Nombre debe tener entre 2 y 30 caracteres"}
 
 	validates :detail, presence: {:message => "Es un campo obligatorio"}
 	validates :detail, length: {minimum: 10, maximum: 100, :message => "El Detalle debe tener entre 10 y 30 caracteres"}

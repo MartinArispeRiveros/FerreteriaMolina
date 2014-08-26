@@ -11,7 +11,7 @@
             <h1>Reporte de Ventas</h1>
             <br>
             <CENTER>
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th><Center>Nombre del cliente</Center></th>
@@ -46,6 +46,7 @@
                                                                     <th><Center>Nombre</Center></th>
                                                                     <th><Center>Codigo del SubProducto</Center></th>
                                                                     <th><Center>Precio De Venta</Center></th>        
+
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -54,9 +55,15 @@
                                                                         <td><CENTER><%= subproduct.name %></CENTER></td>
                                                                         <td><CENTER><%= subproduct.code %></CENTER></td>
                                                                         <td><CENTER><%= subproduct.price %> Bs.</CENTER></td>
-                                                                        <%=@total += subproduct.price%>
+                                                                        <% @total += subproduct.price%>
+                                                                                                                                            
                                                                     </tr>
                                                                 <%end%>
+                                                                <tr>
+                                                                    <td><strong><center>TOTAL</center></strong></td>
+                                                                    <td></td>                            
+                                                                    <td><CENTER><%= @total %> Bs.</CENTER></td>
+                                                                </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>

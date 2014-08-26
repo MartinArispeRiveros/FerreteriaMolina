@@ -1,7 +1,7 @@
 <%= form_validated_for(@productname) do |f| %>
   
     <%= f.label :name, "*Nombre del producto" %>
-    <p><%= f.text_field :name, :maxlength => '20'%></p>
+    <p><%= f.text_field :name, :maxlength => '30'%></p>
     <%=f.label :brand, "*Marca" %>
     <p><%=f.collection_select(:brand_id, Brand.all, :id, :name)%></p> 
     <%= f.label :code, "*Codigo del producto" %>

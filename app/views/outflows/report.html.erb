@@ -15,15 +15,16 @@
 </center>
 
 </p>
-<table class="table table-striped">
+<div class="table-responsive">
+<table class="table table-condensed">
 <% todo = 0%>
   <thead>
   <tr>
-    <th>Nombre</th>
-    <th>Codigo</th>
-    <th>Precio venta</th>
-    <th>Numero de venta</th>
-    <th>Fecha de egreso</th>
+    <th align="center">Nombre</th>
+    <th align="center">Codigo</th>
+    <th align="center">Precio venta</th>
+    <th align="center">Numero de venta</th>
+    <th align="center">Fecha de egreso</th>
   </tr>
 </thead>
 <% @sales.each do |sale|%>
@@ -48,7 +49,7 @@
     <th><%= number_with_precision(todo, :precision =>2, :delimiter => ',') %></th>  
   </tr>
 </table>
-
+</div>
 <form><input type="button" name="imprimir" value="Imprimir" onclick="window.print();"></form>
 
 
