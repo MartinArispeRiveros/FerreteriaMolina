@@ -11,7 +11,7 @@
             <h1>Reporte de Ventas</h1>
             <br>
             <CENTER>
-                <table class="table table-bordered">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th><Center>Nombre del cliente</Center></th>
@@ -27,7 +27,7 @@
                                 <tr>
                                     <td><CENTER><%= sale.client_name %></CENTER></td>
                                     <td><CENTER><%= sale.check_number%></CENTER></td>
-                                    <td><CENTER><%= sale.price %> Bs.</CENTER></td>
+                                    <td><CENTER><%= sale.price %>Bs.</CENTER></td>
                                     <td>
                                         <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#<%=sale.id%>">Detalles</a>
                                         <div class="modal fade" id="<%=sale.id%>" tabindex="-1" role="dialog" aria-labelledby="<%=sale.id%>" aria-hidden="true">
@@ -46,7 +46,6 @@
                                                                     <th><Center>Nombre</Center></th>
                                                                     <th><Center>Codigo del SubProducto</Center></th>
                                                                     <th><Center>Precio De Venta</Center></th>        
-
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -55,15 +54,9 @@
                                                                         <td><CENTER><%= subproduct.name %></CENTER></td>
                                                                         <td><CENTER><%= subproduct.code %></CENTER></td>
                                                                         <td><CENTER><%= subproduct.price %> Bs.</CENTER></td>
-                                                                        <% @total += subproduct.price%>
-                                                                                                                                            
+                                                                        <%=@total += subproduct.price%>
                                                                     </tr>
                                                                 <%end%>
-                                                                <tr>
-                                                                    <td><strong><center>TOTAL</center></strong></td>
-                                                                    <td></td>                            
-                                                                    <td><CENTER><%= @total %> Bs.</CENTER></td>
-                                                                </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -80,7 +73,7 @@
                     <tr>
             <td><h4><CENTER><b>TOTAL</b></CENTER></h4></td>
             <td></td>
-            <td><h4><CENTER><b><%= @total%> Bs.</b></CENTER></h4></td>
+            <td><h4><CENTER><b><%= @total%>Bs.</b></CENTER></h4></td>
             <td></td>
         </tr>
     </tbody>

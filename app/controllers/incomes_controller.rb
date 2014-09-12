@@ -18,7 +18,7 @@ class IncomesController < ApplicationController
     @incomes = Income.where(:created_at => initial_date.beginning_of_day..ending_date.end_of_day)
     render 'report'
   end
-  
+
     def report_search
     end
 

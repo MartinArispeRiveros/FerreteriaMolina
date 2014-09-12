@@ -2,8 +2,6 @@
 <% if current_user.rol == "secre" || current_user.rol == "gerente" || current_user.rol == "enc_almacen"%>
 <% title "Reporte de Egresos" %>
 <h1><center>Reporte de Egresos</center></h1>
-<br>
-<p size=30>
 <center>
   <strong> Fecha de Reporte:&nbsp;&nbsp;&nbsp;    
   <% fecha = Time.now %>
@@ -12,7 +10,6 @@
   <%=fecha.year%>
   </strong>
 </center>
-</p>
 <table class="table table-striped">
 <% todo = 0%>
   <thead>
@@ -26,7 +23,6 @@
     <th><CENTER>Costo total</CENTER></th>
     <th><CENTER>Fecha de ingreso</CENTER></th>
   </tr>
-
 </thead>
 <% @incomes.each do |income| %>
   <tbody>
@@ -54,9 +50,8 @@
     <th><CENTER><%= number_with_precision(todo, :precision =>2, :delimiter => ',') %></CENTER></th> 
 
   </tr>
-  </tbody>    
-
-
+  </tbody>
+  
 
 </table>
 

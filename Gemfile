@@ -37,7 +37,7 @@ gem "paperclip-dropbox", ">= 1.1.7"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
-gem 'taps'
+
 gem 'realtime-validations'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

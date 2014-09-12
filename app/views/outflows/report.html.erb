@@ -4,7 +4,7 @@
 <% title "Reporte de Ingresos" %>
 
 <h1><center>Reporte de Ingresos</center></h1>
-<p size=30>
+
 <center>
   <strong> Fecha de Reporte:&nbsp;&nbsp;&nbsp;    
   <% fecha = Time.now %>
@@ -13,18 +13,18 @@
   <%=fecha.year%>  
   </strong>
 </center>
+<br>
 
-</p>
 <div class="table-responsive">
 <table class="table table-condensed">
 <% todo = 0%>
   <thead>
   <tr>
-    <th align="center">Nombre</th>
-    <th align="center">Codigo</th>
-    <th align="center">Precio venta</th>
-    <th align="center">Numero de venta</th>
-    <th align="center">Fecha de egreso</th>
+    <th>Nombre</th>
+    <th>Codigo</th>
+    <th>Precio venta</th>
+    <th>Numero de venta</th>
+    <th>Fecha de egreso</th>
   </tr>
 </thead>
 <% @sales.each do |sale|%>
@@ -39,7 +39,6 @@
     <td><%= productsale.created_at.strftime("%d/%m/%Y") %></td>
     <% todo = todo + productsale.price %>
   </tr>
-  
   </tbody>
 <% end %>
 <%end%>

@@ -23,8 +23,6 @@ class OutflowsController < ApplicationController
       render 'report_search'
     end
   end
-  
-
   def today_report
     if params[:initial_date] != "" || params[:ending_date] != ""
      initial_date = Date.parse(params[:initial_date])
@@ -38,8 +36,6 @@ class OutflowsController < ApplicationController
       render 'report_search_today'
     end
   end
-
-
   def report_search
   end
 end
