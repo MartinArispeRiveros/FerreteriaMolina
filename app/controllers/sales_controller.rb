@@ -51,8 +51,8 @@ def update
       @sale.save
       flash[:success] = "Venta Confirmada"
       redirect_to @sale
-    else
-      render 'edit'
+    #else
+      #render 'edit'
     end
   end
 
