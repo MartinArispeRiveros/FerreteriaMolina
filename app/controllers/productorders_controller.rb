@@ -31,7 +31,8 @@ class ProductordersController < ApplicationController
       @productorder = Productorder.new(params[:productorder])
       @productorder.ingresado = false
       @productorder.order_id = @order.id
-      @productorder.total_price = params[:productorder][:quantity].to_i*params[:productorder][:price].to_i
+      precio_total=params[:productorder][:price].to_f*params[:productorder][:quantity].to_f
+      @productorder.total_price = precio_total.to_s
       @productorder.save
       if params[:productorder][:control] == "true"
         redirect_to '/orders/'+@order.id.to_s+'/edit'

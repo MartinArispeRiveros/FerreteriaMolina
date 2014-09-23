@@ -88,5 +88,11 @@ class OrdersController < ApplicationController
 		@order.save
 		redirect_to '/orders/'
 	end
-
+	def obtain_total(orders)
+      aux = 0
+      orders.each do |order|
+        aux = aux + order.price
+      end
+      return aux
+    end
 end
